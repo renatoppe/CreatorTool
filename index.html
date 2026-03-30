@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Teacher Tools Creator</title>
+
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Teacher Tools Creator running inside Brain." />
+
+  <link rel="manifest" href="/teacher-tools/manifest.json" />
+  <link rel="icon" href="/teacher-tools/assets/icon-192.png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background: white;
+      max-width: 420px;
+      width: 100%;
+      padding: 32px 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #475569;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0f172a;
+      color: white;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1e293b;
+    }
+
+    .small {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Teacher Tools Creator</h1>
+    <p>
+      Open the dataset creator for Teacher Tools and test it as a lightweight web app.
+    </p>
+
+    <a class="btn" href="/teacher-tools/creator/game-creator.html">
+      Open Creator
+    </a>
+
+    <div class="small">
+      If supported, you can install this app on your device.
+    </div>
+  </div>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/teacher-tools/sw.js")
+          .then(() => console.log("Service Worker registered"))
+          .catch((err) => console.error("Service Worker registration failed:", err));
+      });
+    }
+  </script>
+</body>
+</html>
