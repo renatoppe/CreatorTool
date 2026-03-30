@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Dataset Creator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:40px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+}
+
+input, textarea{
+padding:10px;
+font-size:16px;
+margin:5px 0;
+width:100%;
+}
+
+button{
+padding:12px 16px;
+font-size:16px;
+margin-top:10px;
+cursor:pointer;
+background:#22c55e;
+border:none;
+color:white;
+border-radius:6px;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+.output{
+margin-top:20px;
+height:200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dataset Creator</h1>
+
+<h3>Topic name</h3>
+
+<input
+id="topicInput"
+placeholder="example: long_a_animals"
+/>
+
+<h3>Category</h3>
+
+<input
+id="categoryInput"
+placeholder="example: phonics"
+/>
+
+<h3>Words (one per line)</h3>
+
+<textarea
+id="wordsInput"
+rows="8"
+placeholder="cake
+snake
+plane"
+></textarea>
+
+<button id="saveDatasetBtn">
+
+Save Dataset to Brain
+
+</button>
+
+<h3>Generated JSON preview</h3>
+
+<textarea
+id="outputJson"
+class="output"
+readonly
+></textarea>
+
+</div>
+
+<script src="game-creator.js"></script>
+
+</body>
+
+</html>
